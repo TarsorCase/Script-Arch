@@ -3,7 +3,7 @@ Este es un script de instalación de BSPWM para Arch
 
 1.- Uso del Script
 
-git clone https://github.com/GerardGonzalez41/Script-Arch/
+git clone https://github.com/TarsorCase/Script-Arch
 
 cd Script-Arch
 
