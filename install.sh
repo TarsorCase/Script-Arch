@@ -1,5 +1,8 @@
 #!/bin/bash
 
+exec > >(tee -i install_log.txt)
+exec 2>&1
+
 if [ "$(whoami)" == "root" ]; then
     exit 1
 fi
