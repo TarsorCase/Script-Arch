@@ -12,7 +12,7 @@ sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
 
-sudo pacman -S --noconfirm git vim base-devel 
+sudo pacman -S --noconfirm git vim base-devel wget 
 
 # Instalando Requerimientos para la polybar
 
