@@ -48,7 +48,7 @@ cd build
 cmake ..
 make -j$(nproc)
 sudo make install
-
+export XDG_DATA_DIRS="/usr/local/share:/usr/share:$XDG_DATA_DIRS"
 # Instalando Picom
 
 cd ~/github/picom
@@ -114,14 +114,14 @@ sudo cp -v $ruta/scripts/screenshot /usr/local/bin/
 # Plugins ZSH
 sudo mkdir -p /usr/local/share/fonts/
 sudo mkdir -p /usr/share/fonts/truetype/
-sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete
+sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete-git
 sudo mkdir /usr/share/zsh-sudo
 cd /usr/share/zsh-sudo
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
 
 # Cambiando de SHELL a zsh
 
-chsh -s /usr/bin/zsh
+sudo chsh -s /usr/bin/zsh
 sudo usermod --shell /usr/bin/zsh root
 sudo ln -s -fv ~/.zshrc /root/.zshrc
 
