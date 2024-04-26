@@ -43,8 +43,7 @@ mkdir ~/github
 
 cd ~/github
 git clone --recursive https://github.com/polybar/polybar
-yay -S --noconfirm picom-ibhagwan-git
-
+git clone --recursive https://github.com/yshui/picom.git
 # Instalando Polybar
 
 cd ~/github/polybar
@@ -78,7 +77,7 @@ cp $ruta/rofi/nord.rasi ~/.config/rofi/themes/
 
 # Instando lsd
 
-yay -S $ruta/lsd
+yay -S lsd
 
 # Instalamos las HackNerdFonts
 
@@ -117,7 +116,8 @@ sudo cp -v $ruta/scripts/whichSystem.py /usr/local/bin/
 sudo cp -v $ruta/scripts/screenshot /usr/local/bin/
 
 # Plugins ZSH
-
+sudo mkdir -p /usr/local/share/fonts/
+sudo mkdir -p /usr/share/fonts/truetype/
 sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete
 sudo mkdir /usr/share/zsh-sudo
 cd /usr/share/zsh-sudo
@@ -150,4 +150,8 @@ rm -rf ~/github
 
 # Mensaje de Instalado
 
-notify-send "BSPWM INSTALADO"
+if command -v notify-send &>/dev/null; then
+    notify-send "BSPWM INSTALADO"
+else
+    echo "BSPWM INSTALADO"
+fi
