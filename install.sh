@@ -8,23 +8,29 @@ ruta=$(pwd)
 
 # Actualizando el sistema
 
-sudo pacman -Syu -y
+sudo pacman -Syu
 
 # Instalando dependencias de Entorno
 
-sudo pacman -S -y git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev
+sudo pacman -S git vim base-devel 
 
 # Instalando Requerimientos para la polybar
 
-sudo pacman -S -y cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libuv1-dev libnl-genl-3-dev
-
+sudo pacman -S cmake pkg-config python3-sphinx libcairo2-dev libxcb1-dev xcb-proto 
+ 
 # Dependencias de Picom
 
-sudo pacman -S -y meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev libpcre3 libpcre3-dev
+sudo pacman -S meson
 
 # Instalamos paquetes adionales
 
-sudo pacman -S -y feh scrot scrub zsh rofi xclip bat locate neofetch wmname acpi bspwm sxhkd imagemagick ranger kitty
+sudo pacman -S feh scrot zsh rofi xclip bat locate neofetch wmname acpi bspwm sxhkd imagemagick ranger kitty
+
+#Instalando yay
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
 # Creando carpeta de Reposistorios
 
@@ -34,7 +40,7 @@ mkdir ~/github
 
 cd ~/github
 git clone --recursive https://github.com/polybar/polybar
-git clone https://github.com/ibhagwan/picom.git
+yay -S picom-ibhagwan-git
 
 # Instalando Polybar
 
@@ -69,7 +75,7 @@ cp $ruta/rofi/nord.rasi ~/.config/rofi/themes/
 
 # Instando lsd
 
-sudo pacman -i $ruta/lsd.deb
+yay -S $ruta/lsd
 
 # Instalamos las HackNerdFonts
 
@@ -109,7 +115,7 @@ sudo cp -v $ruta/scripts/screenshot /usr/local/bin/
 
 # Plugins ZSH
 
-sudo pacman -S -y zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete
+sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete
 sudo mkdir /usr/share/zsh-sudo
 cd /usr/share/zsh-sudo
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
@@ -117,7 +123,7 @@ sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/
 # Cambiando de SHELL a zsh
 
 chsh -s /usr/bin/zsh
-sudo usermod --shell /usr/bin/zsh root
+sudo usermod --shell /usr/bin/zsh roo:t
 sudo ln -s -fv ~/.zshrc /root/.zshrc
 
 # Asignamos Permisos a los Scritps
