@@ -8,29 +8,29 @@ ruta=$(pwd)
 
 # Actualizando el sistema
 
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
 
-sudo pacman -S git vim base-devel 
+sudo pacman -S --noconfirm git vim base-devel 
 
 # Instalando Requerimientos para la polybar
 
-sudo pacman -S cmake pkg-config python3-sphinx libcairo2-dev libxcb1-dev xcb-proto 
+sudo pacman -S --noconfirm cmake pkg-config python3-sphinx libcairo2-dev libxcb1-dev xcb-proto 
  
 # Dependencias de Picom
 
-sudo pacman -S meson
+sudo pacman -S --noconfirm meson
 
 # Instalamos paquetes adionales
 
-sudo pacman -S feh scrot zsh rofi xclip bat locate neofetch wmname acpi bspwm sxhkd imagemagick ranger kitty
+sudo pacman -S --noconfirm feh scrot zsh rofi xclip bat locate neofetch wmname acpi bspwm sxhkd imagemagick ranger kitty
 
 #Instalando yay
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 
 # Creando carpeta de Reposistorios
 
@@ -40,7 +40,7 @@ mkdir ~/github
 
 cd ~/github
 git clone --recursive https://github.com/polybar/polybar
-yay -S picom-ibhagwan-git
+yay -S --noconfirm picom-ibhagwan-git
 
 # Instalando Polybar
 
