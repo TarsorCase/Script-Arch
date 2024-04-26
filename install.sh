@@ -23,7 +23,7 @@ sudo pacman -S --noconfirm cmake pkg-config xcb-proto
  
 # Dependencias de Picom
 
-sudo pacman -S --noconfirm meson
+sudo pacman -S --noconfirm meson python-sphinx ninja gcc
 
 # Instalamos paquetes adionales
 
