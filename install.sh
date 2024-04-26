@@ -19,7 +19,7 @@ sudo pacman -S --noconfirm git vim base-devel wget
 
 # Instalando Requerimientos para la polybar
 
-sudo pacman -S --noconfirm cmake pkg-config python3-sphinx libcairo2-dev libxcb1-dev xcb-proto 
+sudo pacman -S --noconfirm cmake pkg-config xcb-proto 
  
 # Dependencias de Picom
 
@@ -126,7 +126,7 @@ sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/
 # Cambiando de SHELL a zsh
 
 chsh -s /usr/bin/zsh
-sudo usermod --shell /usr/bin/zsh roo:t
+sudo usermod --shell /usr/bin/zsh root
 sudo ln -s -fv ~/.zshrc /root/.zshrc
 
 # Asignamos Permisos a los Scritps
