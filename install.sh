@@ -73,7 +73,7 @@ cp $ruta/rofi/nord.rasi ~/.config/rofi/themes/
 
 # Instando lsd
 
-yay -S lsd
+yay -S --noconfirm lsd
 
 # Instalamos las HackNerdFonts
 
