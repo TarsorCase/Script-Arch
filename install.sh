@@ -147,7 +147,6 @@ rofi-theme-selector
 # Removiendo Repositorio
 
 rm -rf ~/github
-rm -rf $ruta
 
 # Mensaje de Instalado
 
