@@ -8,7 +8,8 @@ if [ "$(whoami)" == "root" ]; then
 fi
 
 ruta=$(pwd)
-
+# Establecer la variable de entorno DISPLAY
+export DISPLAY=:0
 # Actualizando el sistema
 
 sudo pacman -Syu --noconfirm
@@ -137,8 +138,21 @@ sudo chmod +x /usr/local/bin/whichSystem.py
 sudo chmod +x /usr/local/bin/screenshot
 
 # Configuramos el Tema de Rofi
-
-rofi-theme-selector
+# Verificar si el servidor X11 está activo
+if [ -n "$DISPLAY" ]; then
+    rofi-theme-selector -display :0
+else
+    # Si el servidor X11 no está activo, intenta iniciarlo
+    startx &
+    # Espera un momento para que se inicie el servidor X11
+    sleep 5
+    # Verifica nuevamente si el servidor X11 está activo
+    if [ -n "$DISPLAY" ]; then
+        rofi-theme-selector -display :0
+    else
+        echo "Error: No se pudo iniciar el servidor X11."
+    fi
+fi
 
 # Removiendo Repositorio
 
