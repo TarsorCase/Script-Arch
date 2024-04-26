@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd "$(dirname "$0")" || exit
 exec > >(tee -i install_log.txt)
 exec 2>&1
 
