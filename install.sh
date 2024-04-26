@@ -14,20 +14,16 @@ ruta=$(pwd)
 sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
-
-sudo pacman -S --noconfirm git vim base-devel wget 
+sudo pacman -S --noconfirm wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor
 
 # Instalando Requerimientos para la polybar
+sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-xkb xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
 
-sudo pacman -S --noconfirm cmake pkg-config xcb-proto 
- 
 # Dependencias de Picom
+sudo pacman -S --noconfirm meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb libxcb-util libxcb-render-util libxcb-render libxcb-composite libxcb-image libxcb-present libxcb-xinerama libxcb-glx
 
-sudo pacman -S --noconfirm meson python-sphinx ninja gcc
-
-# Instalamos paquetes adionales
-
-sudo pacman -S --noconfirm feh scrot zsh rofi xclip bat locate neofetch wmname acpi bspwm sxhkd imagemagick ranger kitty
+# Instalando paquetes adicionales
+sudo pacman -S --noconfirm feh scrot zsh rofi xclip bat mlocate neofetch imagemagick sxhkd bspwm ranger kitty
 
 #Instalando yay
 
