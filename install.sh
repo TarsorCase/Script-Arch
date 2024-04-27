@@ -74,6 +74,7 @@ yay -S --noconfirm lsd
 
 # Instalamos las HackNerdFonts
 
+sudo cp -v $ruta/fonts/HNF/* /usr/share/fonts/
 sudo cp -v $ruta/fonts/HNF/* /usr/local/share/fonts/
 
 # Instalando Fuentes de Polybar
