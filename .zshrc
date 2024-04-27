@@ -183,7 +183,7 @@ function settarget(){
 #Clear Target 
 
 function cleartarget(){
-  echo '' > /home/gerard/.config/bin/target
+  echo '' > ~/.config/bin/target
 }
 
 

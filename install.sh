@@ -60,13 +60,13 @@ sudo ninja -C build install
 
 # Instalando p10k
 cd ~/
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git
 echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 
 # Instalando p10k root
 
-sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/.powerlevel10k
+sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/
 
 # Instando lsd
 
