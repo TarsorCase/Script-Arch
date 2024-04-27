@@ -15,7 +15,7 @@ export DISPLAY=:0
 sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
-sudo pacman -S --noconfirm wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar
+sudo pacman -S --noconfirm wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-syntax-highlighting zsh-autosuggestions
 
 # Instalando Requerimientos para la polybar
 sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-xkb xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
@@ -111,7 +111,6 @@ sudo cp -v $ruta/scripts/screenshot /usr/local/bin/
 # Plugins ZSH
 sudo mkdir -p /usr/local/share/fonts/
 sudo mkdir -p /usr/share/fonts/truetype/
-sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete-git
 sudo mkdir /usr/share/zsh-sudo
 cd /usr/share/zsh-sudo
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
