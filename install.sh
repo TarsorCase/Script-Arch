@@ -21,7 +21,7 @@ sudo pacman -S --noconfirm wget base-devel git vim xcb-util-keysyms xcb-util-wm 
 sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-xkb xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
 
 # Dependencias de Picom
-sudo pacman -S --noconfirm meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb libxcb-util libxcb-render-util libxcb-render libxcb-composite libxcb-image libxcb-present libxcb-xinerama libxcb-glx xorg-server xorg-xinit xterm xorg-xclock
+sudo pacman -S --noconfirm picom meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb libxcb-util libxcb-render-util libxcb-render libxcb-composite libxcb-image libxcb-present libxcb-xinerama libxcb-glx xorg-server xorg-xinit xterm xorg-xclock
 
 # Instalando paquetes adicionales
 sudo pacman -S --noconfirm feh scrot zsh xclip bat mlocate neofetch imagemagick sxhkd bspwm ranger kitty lightdm lightdm-gtk-greeter
