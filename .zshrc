@@ -187,5 +187,4 @@ function cleartarget(){
 }
 
 
-wmname LG3D
 
