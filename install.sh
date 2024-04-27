@@ -137,6 +137,9 @@ sudo chmod +x /usr/local/bin/screenshot
 
 sudo systemctl enable lightdm.service
 sudo systemctl start lightdm.service
+#Ponemos una resolucion de 1920x1080
+
+sudo cp $ruta/Config/resolution/10-monitor.conf /etc/X11/xorg.conf.d/
 
 # Removiendo Repositorio
 
