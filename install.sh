@@ -15,7 +15,7 @@ export DISPLAY=:0
 sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
-sudo pacman -S --noconfirm wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server
+sudo pacman -S --noconfirm wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar
 
 # Instalando Requerimientos para la polybar
 sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-xkb xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
@@ -61,7 +61,8 @@ sudo ninja -C build install
 # Instalando p10k
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
-echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 
 # Instalando p10k root
 

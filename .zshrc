@@ -58,7 +58,7 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
-alias cat='/bin/batcat --paging=never'
+alias cat='/usr/bin/bat --paging=never'
 alias catn='cat'
 alias catnl='batcat'
 
