@@ -141,6 +141,7 @@ sudo systemctl start lightdm.service
 # Removiendo Repositorio
 
 rm -rf ~/github
+rm -rf $ruta
 
 # Mensaje de Instalado
 
