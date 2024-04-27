@@ -186,7 +186,6 @@ function cleartarget(){
   echo '' > /home/gerard/.config/bin/target
 }
 
-source /home/gerard/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 wmname LG3D
 
