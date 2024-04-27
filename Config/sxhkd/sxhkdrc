@@ -1,29 +1,33 @@
-##########################
-# wm independent hotkeys #
-##########################
+#
+# wm independent hotkeys
+#
 
 # terminal emulator
 super + Return
-	/usr/bin/kitty
+	kitty
 
 # program launcher
-super + d
-	rofi -show run
+super + @space
+	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#################
-# bspwm hotkeys #
-#################
+#
+# bspwm hotkeys
+
+#Restart Polybar
+
+super + shift + r
+  pkill -USR1 -x polybar
 
 # quit/restart bspwm
-super + alt + {q,r}
+super + shift + q
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + q
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -38,9 +42,9 @@ super + y
 super + g
 	bspc node -s biggest.window
 
-###############
-# state/flags #
-###############
+#
+# state/flags
+#
 
 # set the window state
 super + {t,shift + t,s,f}
@@ -50,12 +54,12 @@ super + {t,shift + t,s,f}
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-##############
-# focus/swap #
-##############
+#
+# focus/swap
+#
 
 # focus the node in the given direction
-super + {_,shift + }{Left,Down,Up,Right}
+super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
@@ -84,12 +88,12 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-#############
-# preselect #
-#############
+#
+# preselect
+#
 
 # preselect the direction
-super + ctrl + alt + {Left,Down,Up,Right}
+super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
@@ -101,50 +105,45 @@ super + ctrl + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + alt + space
+super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-###############
-# move/resize #
-###############
+#
+# move/resize
+#
 
 # expand a window by moving one of its side outward
-#super + alt + {h,j,k,l}
-#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-#super + alt + shift + {h,j,k,l}
-#	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
-super + ctrl + {Left,Down,Up,Right}
+super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# Custom move/resize
-super + alt + {Left,Down,Up,Right}
-	~/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
+super + e 
+	thunar
 
-########################
-# Custom Launchers App #
-########################
-
-# Firefox
 super + shift + f
 	firefox
 
-# BurpSuite
+# Open Burpsuite Professional
+
 super + shift + b
-	burpsuite
+	/usr/bin/burpsuite >/dev/null & disown
 
-###############
-# ScreenShots #
-###############
+# Open obsidian
 
-@Print
-        screenshot select
+super + shift + o
+  /usr/bin/obsidian >/dev/null & disown
+# i3lock-fancy
+super + shift + x 
+  /usr/bin//i3lock-fancy -t "Introduce tu contraseña" -f /usr/share/fonts/HackNerdFont-Regular.ttf
+  
 
-@Print + ctrl
-        screenshot
-
-@Print + alt
-        screenshot window
+# Switch focus between windows
+super + {Left,Right,Up,Down}
+    bspc node -f {west,east,north,south}
