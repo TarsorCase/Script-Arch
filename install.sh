@@ -15,7 +15,7 @@ export DISPLAY=:0
 sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
-sudo pacman -S --noconfirm wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor
+sudo pacman -S --noconfirm wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server
 
 # Instalando Requerimientos para la polybar
 sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-xkb xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
@@ -24,7 +24,7 @@ sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-ut
 sudo pacman -S --noconfirm meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb libxcb-util libxcb-render-util libxcb-render libxcb-composite libxcb-image libxcb-present libxcb-xinerama libxcb-glx
 
 # Instalando paquetes adicionales
-sudo pacman -S --noconfirm feh scrot zsh rofi xclip bat mlocate neofetch imagemagick sxhkd bspwm ranger kitty
+sudo pacman -S --noconfirm feh scrot zsh xclip bat mlocate neofetch imagemagick sxhkd bspwm ranger kitty lightdm lightdm-gtk-greeter
 
 #Instalando yay
 
@@ -66,11 +66,6 @@ echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 # Instalando p10k root
 
 sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/.powerlevel10k
-
-# Configuramos el tema Nord de Rofi:
-
-mkdir -p ~/.config/rofi/themes
-cp $ruta/rofi/nord.rasi ~/.config/rofi/themes/
 
 # Instando lsd
 
@@ -137,22 +132,10 @@ chmod +x ~/.config/polybar/launch.sh
 sudo chmod +x /usr/local/bin/whichSystem.py
 sudo chmod +x /usr/local/bin/screenshot
 
-# Configuramos el Tema de Rofi
-# Verificar si el servidor X11 está activo
-if [ -n "$DISPLAY" ]; then
-    rofi-theme-selector -display :0
-else
-    # Si el servidor X11 no está activo, intenta iniciarlo
-    startx &
-    # Espera un momento para que se inicie el servidor X11
-    sleep 5
-    # Verifica nuevamente si el servidor X11 está activo
-    if [ -n "$DISPLAY" ]; then
-        rofi-theme-selector -display :0
-    else
-        echo "Error: No se pudo iniciar el servidor X11."
-    fi
-fi
+# Habilitamos lightdm
+
+sudo systemctl enable lightdm.service
+sudo systemctl start lightdm.service
 
 # Removiendo Repositorio
 
