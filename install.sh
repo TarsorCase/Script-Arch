@@ -111,8 +111,8 @@ sudo cp -v $ruta/scripts/screenshot /usr/local/bin/
 # Plugins ZSH
 sudo mkdir -p /usr/local/share/fonts/
 sudo mkdir -p /usr/share/fonts/truetype/
-sudo mkdir /usr/share/zsh-sudo
-cd /usr/share/zsh-sudo
+sudo mkdir /usr/share/zsh/plugins/zsh-sudo/
+cd /usr/share/zsh/plugins/zsh-sudo/
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
 
 # Cambiando de SHELL a zsh
