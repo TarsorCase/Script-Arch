@@ -15,7 +15,7 @@ export DISPLAY=:0
 sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
-sudo pacman -S --noconfirm picom wget base-devel git vim xcb-util-keysyms xcb-util-wm lightdm lightdm-gtk-greeter xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-syntax-highlighting zsh-autosuggestions firefox cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-xkb xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb libxcb-util libxcb-render-util libxcb-render libxcb-composite libxcb-image libxcb-present libxcb-xinerama libxcb-glx xorg-server xorg-xinit xterm xorg-xclock feh scrot zsh xclip bat mlocate neofetch imagemagick sxhkd bspwm ranger kitty firefox net-tools nmap metasploit wireshark hydra john exploitdb  
+sudo pacman -S --noconfirm picom wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-syntax-highlighting zsh-autosuggestions firefox cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-xkb xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb libxcb-util libxcb-render-util libxcb-render libxcb-composite libxcb-image libxcb-present libxcb-xinerama libxcb-glx xorg-server xorg-xinit xterm xorg-xclock feh scrot zsh xclip bat mlocate neofetch imagemagick sxhkd bspwm ranger kitty firefox net-tools nmap metasploit wireshark hydra john exploitdb  
 #Instalando yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -124,7 +124,7 @@ sudo chmod +x /usr/local/bin/whichSystem.py
 sudo chmod +x /usr/local/bin/screenshot
 
 # Habilitamos lightdm
-
+sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
 sudo systemctl start lightdm.service
 #Ponemos una resolucion de 1920x1080
