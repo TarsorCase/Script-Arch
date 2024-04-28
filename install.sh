@@ -130,8 +130,6 @@ chmod +x ~/.config/bin/ethernet_status.sh
 chmod +x ~/.config/bin/htb_status.sh
 chmod +x ~/.config/bin/htb_target.sh
 chmod +x ~/.config/polybar/launch.sh
-chmod +x ~/.config/bin/hackthebox_status.sh
-chmod +x ~/.config/bin/settarget_status.sh
 sudo chmod +x /usr/local/bin/whichSystem.py
 sudo chmod +x /usr/local/bin/screenshot
 
@@ -141,7 +139,7 @@ sudo systemctl enable lightdm.service
 sudo systemctl start lightdm.service
 #Ponemos una resolucion de 1920x1080
 
-sudo cp $ruta/Config/resolution/10-monitor.conf /etc/X11/xorg.conf.d/
+sudo cp -v $ruta/Config/resolution/10-monitor.conf /etc/X11/xorg.conf.d/
 
 # Removiendo Repositorio
 
