@@ -24,10 +24,9 @@ sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-ut
 sudo pacman -S --noconfirm picom meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb libxcb-util libxcb-render-util libxcb-render libxcb-composite libxcb-image libxcb-present libxcb-xinerama libxcb-glx xorg-server xorg-xinit xterm xorg-xclock
 
 # Instalando paquetes adicionales
-sudo pacman -S --noconfirm feh scrot zsh xclip bat mlocate neofetch imagemagick sxhkd bspwm ranger kitty lightdm lightdm-gtk-greeter firefox net-tools nmap metasploit wireshark hydra john exploitdb  
+sudo pacman -S --noconfirm feh scrot zsh xclip bat mlocate neofetch imagemagick sxhkd bspwm ranger kitty firefox net-tools nmap metasploit wireshark hydra john exploitdb  
 
 #Instalando yay
-:
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
