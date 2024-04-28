@@ -76,6 +76,7 @@ yay -S --noconfirm lsd
 
 sudo cp -v $ruta/fonts/HNF/* /usr/share/fonts/
 sudo cp -v $ruta/fonts/HNF/* /usr/local/share/fonts/
+sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
 
 # Instalando Fuentes de Polybar
 
@@ -139,7 +140,7 @@ sudo systemctl enable lightdm.service
 sudo systemctl start lightdm.service
 #Ponemos una resolucion de 1920x1080
 
-sudo cp -v $ruta/Config/resolution/10-monitor.conf /etc/X11/xorg.conf.d/
+sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
 
 # Removiendo Repositorio
 
