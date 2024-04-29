@@ -121,10 +121,10 @@ sudo mkdir -p /usr/share/fonts/truetype/
 sudo mkdir /usr/share/zsh/plugins/zsh-sudo/
 cd /usr/share/zsh/plugins/zsh-sudo/
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
-sudo mkdir /usr/share/zsh/plugins/zsh-syntax-highlighting/
-cd /usr/share/zsh/plugins/zsh-syntax-highlighting/
-sudo wget https://raw.githubusercontent.com/zsh-users/zsh-syntax-highlighting/master/zsh-syntax-highlighting.zsh
-
+cd /usr/share/zsh/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Cambiando de SHELL a zsh
 
 sudo chsh -s /usr/bin/zsh
