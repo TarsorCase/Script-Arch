@@ -28,7 +28,7 @@ sudo pacman -S --noconfirm feh scrot zsh xclip bat mlocate neofetch imagemagick 
 
 #Instalando herramientas de pentesting
 
-sudo pacman -S --noconfirm nmap exploitdb wireshark hydra john
+sudo pacman -S --noconfirm nmap exploitdb wireshark hydra john openvpn
 
 #Instalando yay
 :
