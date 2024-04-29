@@ -15,16 +15,16 @@ export DISPLAY=:0
 sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
-sudo pacman -S --noconfirm picom wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-autosuggestions firefox
+sudo pacman -S --noconfirm picom wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-autosuggestions firefox cmake ninja make
 
 # Instalando Requerimientos para la polybar
-sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-xkb xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
+sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
 
 # Dependencias de Picom
-sudo pacman -S --noconfirm picom meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb libxcb-util libxcb-render-util libxcb-render libxcb-composite libxcb-image libxcb-present libxcb-xinerama libxcb-glx xorg-server xorg-xinit xterm xorg-xclock
+sudo pacman -S --noconfirm picom meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb xorg-server xorg-xinit xterm xorg-xclock xorg-xprop librsvg gdk-pixbuf2
 
 # Instalando paquetes adicionales
-sudo pacman -S --noconfirm feh scrot zsh xclip bat mlocate neofetch imagemagick sxhkd bspwm ranger kitty lightdm lightdm-gtk-greeter firefox net-tools
+sudo pacman -S --noconfirm feh scrot zsh xclip bat mlocate neofetch sxhkd bspwm ranger kitty lightdm lightdm-gtk-greeter net-tools python3 imagemagick libheif libid3tag 
 
 #Instalando herramientas de pentesting
 
@@ -70,7 +70,9 @@ echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 
 # Instalando p10k root
 
-sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/
+sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/.powerlevel10k
+sudo echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >> /root/.zshrc
+sudo echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> /root/.zshrc
 
 # Instando lsd
 
@@ -79,7 +81,6 @@ yay -S --noconfirm lsd
 # Instalamos las HackNerdFonts
 
 sudo cp -v $ruta/fonts/HNF/* /usr/share/fonts/
-sudo cp -v $ruta/fonts/HNF/* /usr/local/share/fonts/
 sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
 
 # Instalando Fuentes de Polybar
