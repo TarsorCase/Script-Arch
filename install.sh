@@ -149,6 +149,8 @@ sudo systemctl start lightdm.service
 
 sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
 
+yay -S burpsuite
+
 # Removiendo Repositorio
 
 rm -rf ~/github
