@@ -148,7 +148,7 @@ sudo systemctl start lightdm.service
 
 sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
 
-yay -S burpsuite
+yay -S --noconfirm burpsuite
 
 #Instalando Nvim
 
