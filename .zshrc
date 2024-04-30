@@ -12,7 +12,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dsun.java2d.xrender=true'
-
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -86,10 +86,6 @@ SAVEHIST=10000
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-git
-zsh-syntax-highlighting
-)
 # Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -125,9 +121,7 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias vim=nvim10
-alias nvim=/home/gerard/Downloads/nvim-linux64/bin/nvim
-alias nvim=/home/gerard/Downloads/nvim-linux64/bin/nvim
+alias nvim=/opt/nvim-linux64/bin/nvim
 alias update-mirrors="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
 alias ls=lsd
 alias cat=bat
