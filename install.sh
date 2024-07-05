@@ -16,7 +16,7 @@ sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
 
-sudo pacman -S --noconfirm zsh lightdm
+sudo pacman -S --noconfirm zsh lightdm lightdm-gtk-greeter
 
 packages=(abseil-cpp
 acl
@@ -159,7 +159,6 @@ gpgme
 gpm
 graphite
 graphviz
-grep
 groff
 grub
 gsettings-desktop-schemas
@@ -421,8 +420,6 @@ libxxf86vm
 libyaml
 libyuv
 licenses
-lightdm
-lightdm-gtk-greeter
 lilv
 linux
 linux-api-headers
