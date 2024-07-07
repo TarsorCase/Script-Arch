@@ -24,7 +24,7 @@ sudo pacman -S --noconfirm feh scrot zsh xclip bat locate sxhkd bspwm ranger kit
 
 #Instalando herramientas de pentesting
 
-sudo pacman -S --noconfirm nmap exploitdb wireshark hydra john openvpn
+sudo pacman -S --noconfirm nmap exploitdb hydra john openvpn
 
 #Instalando yay
 git clone https://aur.archlinux.org/yay.git
@@ -115,10 +115,10 @@ sudo mkdir /usr/share/zsh/plugins/zsh-sudo/
 cd /usr/share/zsh/plugins/zsh-sudo/
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
 
-cd ~/
+cd /usr/share/zsh/plugins/
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Cambiando de SHELL a zsh
 
 sudo chsh -s /usr/bin/zsh
@@ -148,12 +148,17 @@ yay -S --noconfirm burpsuite
 
 #Instalando Nvim
 
+cd ~/
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
 echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ${ZDOTDIR:-$HOME}/.zshrc
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
-sudo rm nvim-linux64.tar.gz
+
+#Instalando Wordlists
+
+cd /usr/share/ 
+git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 
 # Removiendo Repositorio
 
