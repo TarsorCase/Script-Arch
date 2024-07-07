@@ -1,5 +1,5 @@
 #! /bin/sh
-
+sudo localectl set-keymap la-latin1
 wmname LG3D &
 vmware-user-suid-wrapper &
 
