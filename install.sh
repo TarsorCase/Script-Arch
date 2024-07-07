@@ -114,7 +114,8 @@ sudo mkdir -p /usr/share/fonts/truetype/
 sudo mkdir /usr/share/zsh/plugins/zsh-sudo/
 cd /usr/share/zsh/plugins/zsh-sudo/
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
-cd /usr/share/zsh/plugins/
+
+cd ~/
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -150,7 +151,9 @@ yay -S --noconfirm burpsuite
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
+echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ${ZDOTDIR:-$HOME}/.zshrc
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+sudo rm nvim-linux64.tar.gz
 
 # Removiendo Repositorio
 
