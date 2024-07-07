@@ -6,12 +6,24 @@ fi
 ruta=$(pwd)
 # Establecer la variable de entorno DISPLAY
 export DISPLAY=:0
+
+# Aumentando las capacidades de pacman 
+
+echo 'ILoveCandy' >> /etc/pacman.conf
+echo 'ParallelDownloads = 5' >> /etc/pacman.conf
+
+# Aumentando repositorios de BlackArch 
+
+curl -O https://blackarch.org/strap.sh
+chmod +x strap.sh
+sudo ./strap.sh
+
 # Actualizando el sistema
 
 sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
-sudo pacman -S --noconfirm zsh neofetch wmname acpi bspwm imagemagick kitty picom wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-autosuggestions firefox cmake ninja make
+sudo pacman -S --noconfirm zsh wmname acpi bspwm imagemagick kitty picom wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-autosuggestions firefox cmake ninja make
 
 # Instalando Requerimientos para la polybar
 sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
@@ -20,11 +32,11 @@ sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-ut
 sudo pacman -S --noconfirmmeson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb xorg-server xorg-xinit xterm xorg-xclock xorg-xprop librsvg gdk-pixbuf2
 
 # Instalando paquetes adicionales
-sudo pacman -S --noconfirm feh scrot zsh xclip bat locate sxhkd bspwm ranger kitty lightdm lightdm-gtk-greeter net-tools python3 imagemagick libheif libid3tag 
+sudo pacman -S --noconfirm feh scrot zsh xclip bat locate sxhkd bspwm ranger kitty lightdm lightdm-gtk-greeter net-tools python3 imagemagick libheif libid3tag fastfetch docker
 
 #Instalando herramientas de pentesting
 
-sudo pacman -S --noconfirm nmap exploitdb hydra john openvpn
+sudo pacman -S --noconfirm nmap exploitdb hydra john openvpn burpsuite gobuster wfuzz
 
 #Instalando yay
 git clone https://aur.archlinux.org/yay.git
@@ -144,16 +156,15 @@ sudo systemctl start lightdm.service
 
 sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
 
-yay -S --noconfirm burpsuite
-
 #Instalando Nvim
 
 cd ~/
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
-echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ${ZDOTDIR:-$HOME}/.zshrc
+echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+sudo git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 
 #Instalando Wordlists
 
@@ -162,6 +173,7 @@ git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 
 # Removiendo Repositorio
 
+cd ~/
 rm -rf ~/github
 rm -rf $ruta
 
