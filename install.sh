@@ -11,7 +11,7 @@ export DISPLAY=:0
 sudo pacman -Syu --noconfirm
 
 # Instalando dependencias de Entorno
-sudo pacman -S --noconfirm picom wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-autosuggestions firefox cmake ninja make
+sudo pacman -S --noconfirm feh scrot scrub zsh rofi xclip bat locate neofetch wmname acpi bspwm sxhkd imagemagick ranger kitty picom wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-autosuggestions firefox cmake ninja make
 
 # Instalando Requerimientos para la polybar
 sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
