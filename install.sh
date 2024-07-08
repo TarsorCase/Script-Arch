@@ -22,6 +22,11 @@ sudo ./strap.sh
 
 sudo pacman -Syu --noconfirm
 
+#Mejorando nuestro mirrorlist
+
+sudo pacman -S --noconfirm reflector
+sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+
 # Instalando dependencias de Entorno
 sudo pacman -S --noconfirm zsh wmname acpi bspwm imagemagick kitty picom wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-autosuggestions firefox cmake ninja make
 
