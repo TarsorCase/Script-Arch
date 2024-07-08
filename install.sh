@@ -28,16 +28,16 @@ sudo pacman -S --noconfirm reflector
 sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # Instalando dependencias de Entorno
-sudo pacman -S --noconfirm zsh wmname acpi bspwm imagemagick kitty picom wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo xorg-server polybar zsh-autosuggestions firefox cmake ninja make
+sudo pacman -S --noconfirm zsh wmname acpi bspwm kitty picom wget base-devel git vim xcb-util-keysyms xcb-util-wm xcb-util-xrm alsa-lib xcb-util-cursor xorg-xdpyinfo polybar zsh-autosuggestions firefox ninja make
 
 # Instalando Requerimientos para la polybar
-sudo pacman -S --noconfirm cmake ninja gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
+sudo pacman -S --noconfirm cmake gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
 
 # Dependencias de Picom
-sudo pacman -S --noconfirmmeson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb xorg-server xorg-xinit xterm xorg-xclock xorg-xprop librsvg gdk-pixbuf2
+sudo pacman -S --noconfirm meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb xorg-server xorg-xinit xterm xorg-xprop librsvg gdk-pixbuf2
 
 # Instalando paquetes adicionales
-sudo pacman -S --noconfirm feh scrot zsh xclip bat locate sxhkd bspwm ranger kitty lightdm lightdm-gtk-greeter net-tools python3 imagemagick libheif libid3tag fastfetch docker
+sudo pacman -S --noconfirm feh scrot zsh xclip bat locate sxhkd bspwm ranger lightdm lightdm-gtk-greeter net-tools python3 imagemagick libheif libid3tag fastfetch docker
 
 #Instalando herramientas de pentesting
 
