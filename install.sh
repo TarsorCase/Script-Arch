@@ -37,7 +37,7 @@ sudo pacman -S --noconfirm cmake gcc pkg-config python-sphinx cairo xcb-util-ima
 sudo pacman -S --noconfirm meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb xorg-server xorg-xinit xterm xorg-xprop librsvg gdk-pixbuf2
 
 # Instalando paquetes adicionales
-sudo pacman -S --noconfirm feh scrot zsh xclip bat locate sxhkd bspwm ranger lightdm lightdm-gtk-greeter net-tools python3 imagemagick libheif libid3tag fastfetch docker
+sudo pacman -S --noconfirm feh scrot xclip bat locate sxhkd ranger lightdm lightdm-gtk-greeter net-tools python3 imagemagick libheif libid3tag fastfetch docker
 
 #Instalando herramientas de pentesting
 
@@ -50,7 +50,7 @@ makepkg -si --noconfirm
 
 # Creando carpeta de Reposistorios
 
-mkdir ~/github
+mkdir -p ~/github
 
 # Descargar Repositorios Necesarios
 
@@ -99,9 +99,8 @@ sudo cp -v $ruta/Config/polybar/fonts/* /usr/share/fonts/truetype/
 
 # Instalando Wallpaper
 
-mkdir ~/Wallpaper
+mkdir -p ~/Wallpaper
 cp -v $ruta/Wallpaper/* ~/Wallpaper
-mkdir ~/ScreenShots
 
 # Copiando Archivos de Configuración
 
@@ -126,9 +125,8 @@ sudo cp -v $ruta/scripts/whichSystem.py /usr/local/bin/
 sudo cp -v $ruta/scripts/screenshot /usr/local/bin/
 
 # Plugins ZSH
-sudo mkdir -p /usr/local/share/fonts/
-sudo mkdir -p /usr/share/fonts/truetype/
-sudo mkdir /usr/share/zsh/plugins/zsh-sudo/
+
+sudo mkdir -p /usr/local/share/fonts/ /usr/share/fonts/truetype/ /usr/share/zsh/plugins/zsh-sudo/
 cd /usr/share/zsh/plugins/zsh-sudo/
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
 
