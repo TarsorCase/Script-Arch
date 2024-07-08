@@ -1,5 +1,5 @@
 
- <h1 align="center"> Modelo de Base de Datos simple</h1>
+ <h1 align="center"> HexaOs </h1>
  <div align="center">
 <p align="center">
    <img title="blackeye-im" src="https://github.com/TarsorCase/ExamenFinalBD/raw/master/Photos/base-de-datos.png" width="260" height="260" style="display: inline-block;">
@@ -9,21 +9,20 @@
 <p align="center">
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="linea" />
   <h3 align="center">🎓 Propuesta</h3>
-El objetivo de este proyecto es desarrollar un modelo de base de datos simple en C++ 
-para gestionar eventos y fechas de manera eficiente. Este modelo está diseñado para s
-er utilizado en aplicaciones que requieren una manera estructurada y eficiente de alm
-acenar y acceder a eventos asociados con fechas específicas.
+El objetivo de este proyecto es desarrollar un entorno de trabajo que se enfoque y te provea con las herramientas necesarias para trabajar en cibersguridad. El etorno repsetara la filosofia de ocupar la menor cantidad de espacio necesario y dotandote de las herramientas estrictamente necesarias para que cumplas los requisitos solicitados, acompañado la facilidad de herramientas, el etorno y facilidad de manejo es crucial a la hora de maximizar los resultados por lo que opte por bspwm como window manager, sus atajos de teclado e interfaz simple provee al usuario con una imagen clara y rapida de la informacion necesaria. 
 </p> 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="linea" />
-  <h3 align="center">📖 Tabla Base de datos</h3>
-  
-| Caracteristicas    | Consistencia      | Escalabilidad      | Flexibilidad   | Complejidad         | Rendimiento                | Soporte SQL               | Transacciones   |
-|--------------------|-------------------|--------------------|----------------|---------------------|----------------------------|---------------------------|-----------------|
-| RDBMS              | Alta              | Vertical           | Media          | Alta                | Medio                      | Si                        | Complejas       |
-| NoSQL              | Eventual          | Horizontal         | Alta           | Media               | Alto                       | No (generalmente)         | Simples         |
-| En Memoria         | Alta (en algunos) | Horizontal         | Baja           | Baja                | Muy Alto                   | No                        | Limitadas       |
-| Orientada a Grafos | Alta              | Horizontal         | Media          | Alta                | Alto                       | No                        | Complejas       |
-| Timeseries         | Alta              | Horizontal         | Media          | Media               | Alto                       | A veces (con extensiones) | Simples         |
+
+<h3 align="center">📖 Tabla Herramientas ya instaladas</h3>
+
+| Sector                 | Herramientas                                            |
+|------------------------|---------------------------------------------------------|
+| Escaneo de red         | `nmap`, `openvpn`, `wireshark`, `tcpdump`, `netcat`     |
+| Exploits               | `exploitdb`                                             |
+| Fuerza bruta           | `hydra`, `hashcat`                                      |
+| Crackeo de contraseñas | `john`                                                  |
+| Seguridad web          | `burpsuite`, `gobuster`, `wfuzz`, `sqlmap`              |
+| IDS/IPS                | `snort`                                                 |
 
 
 Estas son las tecnologias mas conocidas en el sector de las bases de datos, podemos ver su comparacion en diferentes caracteristicas y como se adecuan a cada caso de uso.

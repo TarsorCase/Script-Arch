@@ -41,7 +41,7 @@ sudo pacman -S --noconfirm feh scrot xclip bat locate sxhkd ranger lightdm light
 
 #Instalando herramientas de pentesting
 
-sudo pacman -S --noconfirm nmap exploitdb hydra john openvpn burpsuite gobuster wfuzz
+sudo pacman -S --noconfirm nmap exploitdb hydra john openvpn burpsuite gobuster wfuzz tcpdump hashcat sqlmap snort 
 
 #Instalando yay
 git clone https://aur.archlinux.org/yay.git
