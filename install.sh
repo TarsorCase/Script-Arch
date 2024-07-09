@@ -44,6 +44,7 @@ sudo pacman -S --noconfirm feh scrot xclip bat locate sxhkd ranger lightdm light
 sudo pacman -S --noconfirm nmap exploitdb hydra john openvpn burpsuite gobuster wfuzz tcpdump hashcat sqlmap snort 
 
 #Instalando yay
+cd ~/
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
@@ -131,7 +132,7 @@ cd /usr/share/zsh/plugins/zsh-sudo/
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
 
 cd /usr/share/zsh/plugins/
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Cambiando de SHELL a zsh
@@ -158,9 +159,7 @@ sudo systemctl start lightdm.service
 
 #Detectamos la resolucion del monitor y lo adaptamos 
 
-output=$(xrandr | grep " connected" | awk '{ print$1 }')
-resolution=$(xrandr | grep "*" | awk '{ print $1 }')
-xrandr --output $output --mode $resolution
+sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
 
 #Instalando Nvim
 
@@ -175,13 +174,13 @@ sudo git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 #Instalando Wordlists
 
 cd /usr/share/ 
-git clone --depth 1 https://github.com/danielmiessler/SecLists.git
+sudo git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 
 # Removiendo Repositorio
 
 cd ~/
-rm -rf ~/github
-rm -rf $ruta
+sudo rm -r ~/github
+sudo rm -r ~/Script-Arch
 
 # Mensaje de Instalado
 
