@@ -167,7 +167,7 @@ cd ~/
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
-echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
+echo 'export PATH="/opt/nvim-linux64/bin:$PATH"' >> ~/.zshrc
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 sudo git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 
@@ -175,6 +175,27 @@ sudo git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 
 cd /usr/share/ 
 sudo git clone --depth 1 https://github.com/danielmiessler/SecLists.git
+
+
+
+# Agregar configuración de teclado
+sudo tee /etc/systemd/system/set-keymap.service > /dev/null <<EOF
+[Unit]
+Description=Set Latin American Spanish Keyboard Layout
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/localectl set-keymap la-latin1
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Habilitar y arrancar el servicio de configuración del teclado
+sudo systemctl enable set-keymap.service
+sudo systemctl start set-keymap.service
+
+
 
 # Removiendo Repositorio
 
