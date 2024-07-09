@@ -155,9 +155,12 @@ sudo chmod +x /usr/local/bin/screenshot
 
 sudo systemctl enable lightdm.service
 sudo systemctl start lightdm.service
-#Ponemos una resolucion de 1920x1080
 
-sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
+#Detectamos la resolucion del monitor y lo adaptamos 
+
+output=$(xrandr | grep " connected" | awk '{ print$1 }')
+resolution=$(xrandr | grep "*" | awk '{ print $1 }')
+xrandr --output $output --mode $resolution
 
 #Instalando Nvim
 
