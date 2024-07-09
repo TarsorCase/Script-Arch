@@ -9,8 +9,8 @@ export DISPLAY=:0
 
 # Aumentando las capacidades de pacman 
 
-echo 'ILoveCandy' >> /etc/pacman.conf
-echo 'ParallelDownloads = 5' >> /etc/pacman.conf
+sudo echo 'ILoveCandy' >> /etc/pacman.conf
+sudo echo 'ParallelDownloads = 5' >> /etc/pacman.conf
 
 # Aumentando repositorios de BlackArch 
 
