@@ -163,11 +163,14 @@ sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
 #Instalando Nvim
 
 sudo rm -rf /opt/nvim
+sudo mkdir -p /opt
 cd /opt/
-sudo curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo curl -LO -sf https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo tar -xzf nvim-linux64.tar.gz
-echo 'export PATH="/opt/nvim-linux64/bin:$PATH"' >> ~/.zshrc
-git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
+source ~/.zshrc
+rm -rf ~/.config/nvim
+git clone https://github.com/NvChad/starter ~/.config/nvim
 
 #Instalando Wordlists
 
