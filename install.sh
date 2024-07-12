@@ -9,6 +9,7 @@ export DISPLAY=:0
 
 # Aumentando las capacidades de pacman 
 
+sudo loadkeys la-latin1
 sudo cp -v $ruta/Config/pacman/pacman.conf /etc/pacman.conf
 
 # Aumentando repositorios de BlackArch 
@@ -151,6 +152,11 @@ chmod +x ~/.config/polybar/launch.sh
 sudo chmod +x /usr/local/bin/whichSystem.py
 sudo chmod +x /usr/local/bin/screenshot
 
+# Habilitamos el teclado en español latam
+
+sudo localectl set-x11-keymap latam
+sudo localectl set-keymap latam
+
 # Habilitamos lightdm
 
 sudo systemctl enable lightdm.service
@@ -168,11 +174,6 @@ git clone https://github.com/NvChad/starter ~/.config/nvim
 
 cd /usr/share/ 
 sudo git clone --depth 1 https://github.com/danielmiessler/SecLists.git
-
-
-
-# Agregar configuración de teclado
-
 
 
 # Removiendo Repositorio
