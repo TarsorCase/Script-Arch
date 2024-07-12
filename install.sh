@@ -33,7 +33,7 @@ sudo pacman -S --noconfirm zsh wmname acpi bspwm kitty picom wget base-devel git
 sudo pacman -S --noconfirm cmake gcc pkg-config python-sphinx cairo xcb-util-image xcb-util-wm xcb-util-cursor xcb-util-renderutil xcb-util-errors libpulse jsoncpp libmpdclient libnl libuv
 
 # Dependencias de Picom
-sudo pacman -S --noconfirm meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb xorg-server xorg-xinit xterm xorg-xprop librsvg gdk-pixbuf2
+sudo pacman -S --noconfirm neovim meson libxext libxcb libxdamage libxfixes libxshmfence pixman dbus libconfig libgl pcre uthash libev libx11 libxcb xorg-server xorg-xinit xterm xorg-xprop librsvg gdk-pixbuf2
 
 # Instalando paquetes adicionales
 sudo pacman -S --noconfirm feh scrot xclip bat locate sxhkd ranger lightdm lightdm-gtk-greeter net-tools python3 imagemagick libheif libid3tag fastfetch docker
@@ -162,14 +162,6 @@ sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
 
 #Instalando Nvim
 
-sudo rm -rf /opt/nvim
-sudo mkdir -p /opt
-cd /opt/
-sudo curl -LO -sf https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-sudo tar -xzf nvim-linux64.tar.gz
-echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
-source ~/.zshrc
-rm -rf ~/.config/nvim
 git clone https://github.com/NvChad/starter ~/.config/nvim
 
 #Instalando Wordlists
