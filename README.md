@@ -59,8 +59,7 @@ Siéntanse libres de subir un pull request si desean contribuir :).
   <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
     <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="git" width="40" height="40"/>
   </a>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="vsc" width="40" height="40"/>
-  </a>
+  <a href="yes">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="vsc" width="40" height="40"/>
   </a>
 </p>
