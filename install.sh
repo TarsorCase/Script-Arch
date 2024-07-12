@@ -180,21 +180,6 @@ sudo git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 
 
 # Agregar configuración de teclado
-sudo tee /etc/systemd/system/set-keymap.service > /dev/null <<EOF
-[Unit]
-Description=Set Latin American Spanish Keyboard Layout
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/localectl set-keymap la-latin1
-
-[Install]
-WantedBy=multi-user.target
-EOF
-
-# Habilitar y arrancar el servicio de configuración del teclado
-sudo systemctl enable set-keymap.service
-sudo systemctl start set-keymap.service
 
 
 
