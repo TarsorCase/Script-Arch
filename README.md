@@ -36,6 +36,12 @@ git clone https://github.com/TarsorCase/Script-Arch
 ```
 cd Script-Arch/
 ```
+```
+chmod +x install.sh
+```
+```
+./install.sh
+```
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="linea" />
 
