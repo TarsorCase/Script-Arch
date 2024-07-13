@@ -1,9 +1,6 @@
 
- <h1 align="center"> HexaOs </h1>
+ <h1 align="center"> Alpha Arch </h1>
  <div align="center">
-<p align="center">
-   <img title="blackeye-im" src="https://github.com/TarsorCase/ExamenFinalBD/raw/master/Photos/base-de-datos.png" width="260" height="260" style="display: inline-block;">
-</p>
 </div>
 
 <p align="center">
