@@ -10,7 +10,7 @@ El objetivo de este proyecto es desarrollar un entorno de trabajo que se enfoque
 </p> 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="linea" />
 
-<h3 align="center">📖 Tabla Herramientas ya instaladas</h3>
+<h3 align="center">📖 Herramientas ya instaladas</h3>
 
 | Sector                 | Herramientas                                            |
 |------------------------|---------------------------------------------------------|
