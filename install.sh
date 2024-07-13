@@ -177,6 +177,7 @@ sudo cp -v $ruta/Config/resolution/* /etc/X11/xorg.conf.d/
 
 #Instalando Nvim
 
+cd ~/
 git clone https://github.com/NvChad/starter ~/.config/nvim
 
 #Instalando Wordlists
