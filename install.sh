@@ -189,8 +189,7 @@ sudo git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 # Removiendo Repositorio
 
 cd ~/
-sudo rm -r ~/github
-sudo rm -r ~/Script-Arch
+sudo rm -rf ~/Script-Arch
 
 # Mensaje de Instalado
 
