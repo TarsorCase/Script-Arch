@@ -8,7 +8,7 @@
 <p align="center">
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="linea" />
   <h3 align="center">🎓 Propuesta</h3>
-El objetivo de este proyecto es desarrollar un entorno de trabajo que se enfoque y te provea con las herramientas necesarias para trabajar en cibersguridad. El etorno repsetara la filosofia de ocupar la menor cantidad de espacio necesario y dotandote de las herramientas estrictamente necesarias para que cumplas los requisitos solicitados, acompañado la facilidad de herramientas, el etorno y facilidad de manejo es crucial a la hora de maximizar los resultados por lo que opte por bspwm como window manager, sus atajos de teclado e interfaz simple provee al usuario con una imagen clara y rapida de la informacion necesaria. 
+El objetivo de este proyecto es desarrollar un entorno de trabajo que se enfoque y te provea con las herramientas necesarias para trabajar en cibersguridad. El etorno respeta la filosofia de ocupar la menor cantidad de espacio necesario, dotandote de las herramientas estrictamente necesarias para que cumplas con cualquier requisito solicitado, denotar la facilidad de herramientas, el etorno y facilidad de manejo es crucial a la hora de maximizar los resultados por lo que opte por bspwm como window manager, sus atajos de teclado e interfaz simple provee al usuario con una imagen clara y rapida de la informacion necesaria. 
 </p> 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="linea" />
 
@@ -24,7 +24,7 @@ El objetivo de este proyecto es desarrollar un entorno de trabajo que se enfoque
 | IDS/IPS                | `snort`                                                 |
 
 
-Estas son las tecnologias mas conocidas en el sector de las bases de datos, podemos ver su comparacion en diferentes caracteristicas y como se adecuan a cada caso de uso.
+Estas son las herramientas que ya vienen preinstaladas en el sistema y como se adecuan a cada caso de uso.
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="linea" />
 <h3 align="center">🥪 Como usarlo</h3>
