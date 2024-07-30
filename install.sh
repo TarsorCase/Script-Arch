@@ -50,11 +50,11 @@ cd yay
 makepkg -si --noconfirm
 
 # Instalando Neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+
 sudo rm -rf /opt/nvim
-sudo tar -C /opt -xzf nvim-linux64.tar.gz
-export PATH="$PATH:/opt/nvim-linux64/bin"
-echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
+sudo cp -v $ruta/Config/nvim/nvim-linux64.tar.gz /opt/
+cd /opt/
+sudo tar -xzf nvim-linux64.tar.gz
 source ~/.zshrc
 
 
