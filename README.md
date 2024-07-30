@@ -2,8 +2,10 @@
  <h1 align="center"> Arch Script </h1>
  <div align="center">
 </div>
+ <div align="center">
+  <img src="https://github.com/TarsorCase/Script-Arch/blob/main/Wallpaper/Arch.png" alt="Arch Wallpaper" />
+</div>
 <p align="center">
-![Arch Wallpaper](https://github.com/TarsorCase/Script-Arch/blob/main/Wallpaper/Arch.png)
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" alt="linea" />
   <h3 align="center">🎓 Propuesta</h3>
 El objetivo de este proyecto es desarrollar un entorno de trabajo que se enfoque y te provea con las herramientas necesarias para trabajar en cibersguridad. El etorno repsetara la filosofia de ocupar la menor cantidad de espacio necesario y dotandote de las herramientas estrictamente necesarias para que cumplas los requisitos solicitados, acompañado la facilidad de herramientas, el etorno y facilidad de manejo es crucial a la hora de maximizar los resultados por lo que opte por bspwm como window manager, sus atajos de teclado e interfaz simple provee al usuario con una imagen clara y rapida de la informacion necesaria. 
