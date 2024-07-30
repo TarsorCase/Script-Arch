@@ -55,6 +55,7 @@ sudo rm -rf /opt/nvim
 sudo cp -v $ruta/Config/nvim/nvim-linux64.tar.gz /opt/
 cd /opt/
 sudo tar -xzf nvim-linux64.tar.gz
+sudo rm -rf nvim-linux64.tar.gz
 source ~/.zshrc
 
 
